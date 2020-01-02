@@ -1,5 +1,11 @@
+@import "../components/icon/icon.style.scss";
+@import "../components/input-field/input-field.style.scss";
+@import "../components/search-button/search-button.style.scss";
+@import "../components/sidebar/sidebar.style.scss";
+@import "../components/user-nav/user-nav.style.scss";
+
+@import "../pages/landing-page/landing-page.styles.scss";
+
 @import "../scss/abstracts/variables";
 
 @import "../scss/base/base";
-
-@import "../pages/landing-page/landing-page.styles.scss";
