@@ -21,6 +21,7 @@ export const MainContent = styled.div`
 `;
 
 export const OverviewDetail = styled.div`
+    font-size: 1.4rem;
     display: flex;
     padding: 4.5rem;
     background-color: ${ COLORS.lightGrey1};
@@ -35,10 +36,8 @@ export const HotelDescriptionContainer = styled.div`
     padding: 3rem;
 `;
 
-export const UserReviewsContainer = styled.div`
-    flex: 1;
-`;
-
 export const DescriptionParagraph = styled.p`
-    font-size: 1.4rem;
+    &:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
 `;

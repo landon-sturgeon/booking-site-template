@@ -8,11 +8,11 @@ import Header from "../../components/header/header.component";
 import Overview from "../../components/overview/overview.component";
 import Recommendation from "../../components/recommandations/recommendation.component";
 import Sidebar from "../../components/sidebar/sidebar.component";
+import UserReviews from "../../components/user-reviews/user-reviews.component";
 
 import { 
     Container, Content, MainContent, OverviewDetail,
-    HotelDescriptionContainer, UserReviewsContainer,
-    DescriptionParagraph
+    HotelDescriptionContainer, DescriptionParagraph
 } from "./landing-page.style"; 
 
 const LandingPage = () => {
@@ -43,9 +43,7 @@ const LandingPage = () => {
                             <Recommendation />
                         </HotelDescriptionContainer>
 
-                        <UserReviewsContainer>
-                            User reviews
-                        </UserReviewsContainer>
+                        <UserReviews />
                     </OverviewDetail>
                 </MainContent>
             </Content>
