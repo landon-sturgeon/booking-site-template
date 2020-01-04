@@ -2,6 +2,7 @@ import React from "react"
 
 import user from "../../assets/img/user.jpg";
 
+import CallToAction from "../../components/cta/cta.component";
 import FeatureList from "../../components/feature-list/feature-list.component";
 import Gallery from "../../components/gallery/gallery.component";
 import Header from "../../components/header/header.component";
@@ -47,6 +48,8 @@ const LandingPage = () => {
                     </OverviewDetail>
                 </MainContent>
             </Content>
+            <CallToAction />
+
         </Container>
     );
 }
