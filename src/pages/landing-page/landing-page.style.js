@@ -12,6 +12,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     display: flex;
+    height: 80rem;
 `;
 
 export const MainContent = styled.div`
