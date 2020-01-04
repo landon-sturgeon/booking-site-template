@@ -12,11 +12,33 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     display: flex;
-    height: 80rem;
-`;
+]`;
 
 export const MainContent = styled.div`
     background-color: #fff;
 
     flex: 1;
+`;
+
+export const OverviewDetail = styled.div`
+    display: flex;
+    padding: 4.5rem;
+    background-color: ${ COLORS.lightGrey1};
+    border-bottom: 1px solid ${ COLORS.lightGrey2}
+`;
+
+export const HotelDescriptionContainer = styled.div`
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0,0,0, 0.1);
+    padding: 3rem;
+`;
+
+export const UserReviewsContainer = styled.div`
+    flex: 1;
+`;
+
+export const DescriptionParagraph = styled.p`
+    font-size: 1.4rem;
 `;
