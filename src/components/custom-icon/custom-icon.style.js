@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS } from "../../global.style";
+import { COLORS, DEVICE } from "../../global.style";
 
 export const IconContainer = styled.div`
     position: relative;
@@ -9,6 +9,13 @@ export const CustomIconImage = styled.svg`
     height: 2.25rem;
     width: 2.25rem;
     fill: ${COLORS.darkGrey2};
+    margin-right: 2rem;
+
+    @media only screen and ${ DEVICE.small } {
+        margin: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 `;
 
 export const UserNotificationSpan = styled.span`

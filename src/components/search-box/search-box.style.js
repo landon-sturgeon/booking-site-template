@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS } from "../../global.style";
+import { COLORS, DEVICE } from "../../global.style";
 
 export const SearchBoxForm = styled.form`
     flex: 0 0 40%;
@@ -7,6 +7,12 @@ export const SearchBoxForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and ${ DEVICE.smaller } {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: ${COLORS.lightGrey2};
+    }
 `;
 
 export const SearchBoxInput = styled.input`

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS } from "../../global.style";
+import { COLORS, DEVICE } from "../../global.style";
 
 export const UserReviewsContainer = styled.div`
     flex: 1;
@@ -19,6 +19,11 @@ export const UserReview = styled.div`
     flex-direction: column;
     position: relative;
     overflow: hidden;
+
+    @media only screen and ${ DEVICE.medium } {
+        margin-bottom: 3rem;
+        padding: 2rem;
+    }
 
     &::before {
         content: "\\201C";

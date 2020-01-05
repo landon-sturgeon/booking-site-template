@@ -46,10 +46,9 @@ const LandingPage = () => {
 
                         <UserReviews />
                     </OverviewDetail>
+                    <CallToAction />
                 </MainContent>
             </Content>
-            <CallToAction />
-
         </Container>
     );
 }

@@ -17,6 +17,27 @@ export const SHADOWS = {
     shadowDark: "0 2rem 6rem rgba(0, 0, 0, 0.7)"
 }
 
+/*
+MEDIA QUERY MANAGER
+*/
+
+const size = {
+    largest: "75em", // 1200px
+    large: "68.75em", // 1100px
+    medium: "56.25em", // 900px
+    small: "37.5em", // 600px
+    smaller: "31.25em" // 500px
+};
+
+export const DEVICE = {
+    largest: `(max-width: ${ size.largest })`,
+    large: `(max-width: ${ size.large })`,
+    medium: `(max-width: ${ size.medium })`,
+    small: `(max-width: ${ size.small })`,
+    smaller: `(max-width: ${ size.smaller })`
+};
+
+// Global styles
 export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
@@ -32,6 +53,10 @@ export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
         font-size: 62.5%;
+
+        @media only screen and ${ DEVICE.large } {
+            font-size: 50%;
+        }
     }
 
     body {

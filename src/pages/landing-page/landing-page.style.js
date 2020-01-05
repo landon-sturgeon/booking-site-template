@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS, SHADOWS } from "../../global.style";
+import { COLORS, SHADOWS, DEVICE } from "../../global.style";
 
 export const Container = styled.div`
     max-width: 120rem;
@@ -7,11 +7,21 @@ export const Container = styled.div`
     background-color: ${COLORS.lightGrey1};
     box-shadow: ${SHADOWS.shadowDark};
 
-    min-height: 60rem;
+    min-height: 50rem;
+
+    @media only screen and ${ DEVICE.largest } {
+        margin: 0;
+        max-width; 100%;
+        width: 100%;
+    }
 `;
 
 export const Content = styled.div`
     display: flex;
+
+    @media only screen and ${ DEVICE.medium } {
+        flex-direction: column;
+    }
 ]`;
 
 export const MainContent = styled.div`
@@ -26,6 +36,14 @@ export const OverviewDetail = styled.div`
     padding: 4.5rem;
     background-color: ${ COLORS.lightGrey1};
     border-bottom: 1px solid ${ COLORS.lightGrey2}
+
+    @media only screen and ${ DEVICE.medium } {
+        padding 3rem;
+    }
+
+    @media only screen and ${ DEVICE.small } {
+        flex-direction: column;
+    }
 `;
 
 export const HotelDescriptionContainer = styled.div`
@@ -34,6 +52,16 @@ export const HotelDescriptionContainer = styled.div`
     background-color: #fff;
     box-shadow: 0 2rem 5rem rgba(0,0,0, 0.1);
     padding: 3rem;
+
+    @media only screen and ${ DEVICE.medium } {
+        margin-right: 3rem;
+        padding: 2rem;
+    }
+
+    @media only screen and ${ DEVICE.small } {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 `;
 
 export const DescriptionParagraph = styled.p`

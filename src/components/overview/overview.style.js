@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS } from "../../global.style";
+import { COLORS, DEVICE } from "../../global.style";
 
 export const OverviewContainer = styled.div`
     display: flex;
@@ -14,6 +14,11 @@ export const OverviewHeading = styled.h1`
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and ${ DEVICE.small } {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem;
+    }
 `;
 
 export const OverviewIconStar = styled.svg`
@@ -51,15 +56,28 @@ export const OverviewAverageRatingContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media only screen and ${ DEVICE.small } {
+        font-size: 1.5rem;
+    }
 `;
 
 export const OverviewAverageRating = styled.div`
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @media only screen and ${ DEVICE.small } {
+        padding: 0 1.8rem;
+        margin-bottom: 0;
+    }
 `;
 
 export const OverviewRatingCount = styled.div`
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    @media only screen and ${ DEVICE.small } {
+        font-size: 0.5rem;
+    }
 `;

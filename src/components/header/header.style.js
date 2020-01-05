@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { COLORS } from "../../global.style";
+import { COLORS, DEVICE } from "../../global.style";
 
 export const HeaderContainer = styled.header`
     font-size: 1.4rem;
@@ -10,6 +10,12 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and ${ DEVICE.smaller } {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
 `;
 
 export const LogoImage = styled.img`

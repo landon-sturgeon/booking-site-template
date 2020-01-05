@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { COLORS } from "../../global.style";
+import { COLORS, DEVICE } from "../../global.style";
 
 const isActive = (props) => {
     if (props.highlight) {
@@ -17,18 +17,33 @@ const isActive = (props) => {
 }
 
 export const Navigation = styled.nav`
+
     background-color: ${COLORS.darkGrey1};
 
     flex: 0 0 18%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media only screen and ${ DEVICE.medium } {
+        display: flex;
+        margin: 0;
+    }
 `;
 
 export const SideNavList = styled.ul`
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+
+    @media only screen and ${ DEVICE.medium } {
+        display: flex;
+        margin: 0;
+    }
+
+    @media only screen and ${ DEVICE.smaller } {
+        align-items: center;
+    }
 `;
 
 export const SideNavListItem = styled.li`
@@ -36,6 +51,10 @@ export const SideNavListItem = styled.li`
 
     &:not(:last-child) {
         margin-bottom: 0.5rem;
+
+        @media only screen and ${ DEVICE.medium } {
+            margin: 0;
+        }
     }
 
     &::before {
@@ -55,6 +74,15 @@ export const SideNavListItem = styled.li`
         transform: scaleY(1);
         width: 100%;
     }
+
+    @media only screen and ${ DEVICE.medium } {
+        margin: 0;
+        flex: 1;
+    }
+
+    @media only screen and ${ DEVICE.medium } {
+        justify-content: center;    
+    }
 `;
 
 export const SideNavLink = styled.a`
@@ -70,6 +98,16 @@ export const SideNavLink = styled.a`
         position: relative;
         z-index: 10;
     }
+
+    @media only screen and ${ DEVICE.medium } {
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    @media only screen and ${ DEVICE.small } {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
 `;
 
 export const SideNavIcon = styled.svg`
@@ -77,10 +115,16 @@ export const SideNavIcon = styled.svg`
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and ${ DEVICE.small } {
+        margin: 0;
+        align-items: center;
+        margin-bottom: 0.7rem;
+    }
 `;
 
 export const SideNavIconSpan = styled.span`
-
+    display: flex;
 `;
 
 export const LegalContent = styled.div`
@@ -88,4 +132,8 @@ export const LegalContent = styled.div`
     text-align: center;
     padding: 2.5rem;
     color: ${COLORS.lightGrey4};
+
+    @media only screen and ${ DEVICE.medium } {
+        display: none;
+    }
 `;

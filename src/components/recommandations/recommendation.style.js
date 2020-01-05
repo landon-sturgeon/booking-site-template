@@ -15,7 +15,7 @@ export const RecommendationCount = styled.p`
 `;
 
 export const RecommendationFriends = styled.div`
-    // element is already taken care of by container.
+    display: flex;
 `;
 
 export const RecommendationFriendPhoto = styled.img`
@@ -26,6 +26,6 @@ export const RecommendationFriendPhoto = styled.img`
     border: 3px solid #fff;
 
     &:not(:last-child) {
-        margin-right: -1.5rem;
+        margin-right: -2rem;
     }
 `;

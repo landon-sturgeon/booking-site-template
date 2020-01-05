@@ -23,6 +23,7 @@ export const CTAButtonContainer = styled.button`
     color: #fff;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     & > * {
         display: inline-block;
